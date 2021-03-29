@@ -1,0 +1,195 @@
+<form [formGroup]="newpurord" >
+
+  <!-- first row starts from here -->
+
+  <div class="row">
+    <div class="col">
+      <label for="po#">
+        P.O. #
+      </label>
+      <input id="po" type="text" formControlName="po">
+    </div>
+
+
+    <div class="col">
+      <label for="podate#">
+        P.O.Date
+      </label>
+      <mat-form-field appearance="fill">
+        <mat-label> Date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="status">
+        Supplier SO#
+      </label>
+      <input id="status" type="text" formControlName="status">
+    </div>
+
+    <div class="col">
+      <label for="podate#">
+        Status
+      </label>
+      <mat-form-field appearance="fill">
+        <select matNativeControl required>
+          <option value="received">Not Received</option>
+          <option value="notreceived">Received</option>
+          <option value="pending">Pending</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="Requiredship">
+        Required Ship
+      </label>
+      <mat-form-field appearance="fill">
+        <mat-label> Date</mat-label>
+        <input matInput [matDatepicker]="picker2">
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="Etadate">
+        ETA Date
+      </label>
+      <mat-form-field appearance="fill">
+        <mat-label> Date</mat-label>
+        <input matInput [matDatepicker]="picker3">
+        <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+        <mat-datepicker #picker3></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="poexpdate">
+        P.O. Expiry Date
+      </label>
+      <mat-form-field appearance="fill">
+        <mat-label> Date</mat-label>
+        <input matInput [matDatepicker]="picker4">
+        <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
+        <mat-datepicker #picker4></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="container">
+        Container
+      </label>
+      <input id="container" type="text" formControlName="container">
+    </div>
+
+    <div class="col">
+      <label for="deltype#">
+        Delivery Type
+      </label>
+      <mat-form-field appearance="fill">
+        <select matNativeControl required>
+          <option value="overnight">Over Night</option>
+          <option value="twodays">2 days</option>
+          <option value="oneday">1 days</option>
+          <option value="week">weeek</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="shipterms#">
+        Shipping Terms
+      </label>
+      <mat-form-field appearance="fill">
+        <select matNativeControl required>
+          <option value="val">Select</option>
+          <option value="val1">val1</option>
+          <option value="val2">val2</option>
+          <option value="val3">val3</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="carolyn">
+        Carolyn
+      </label>
+      <input id="carolyn" type="text" formControlName="carolyn">
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+
+  <!-- second row starts from here -->
+
+
+  <div class="row">
+    <div class="col">
+      <app-supplier></app-supplier>
+    </div>
+    <div class="col">
+      <app-purchaselocation></app-purchaselocation>
+    </div>
+    <div class="col">
+      <app-shiptolocation></app-shiptolocation>
+    </div>
+    <div class="col">
+      <app-addinfor></app-addinfor>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <!-- third row starts from here -->
+
+  <div class="row">
+    <div class="col">
+      <label for="sylvia">
+        Sylvia
+      </label>
+      <mat-form-field appearance="fill">
+        <select matNativeControl required>
+          <option value="val">Select</option>
+          <option value="val1">val1</option>
+          <option value="val2">val2</option>
+          <option value="val3">val3</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="Breda">
+        Breda
+      </label>
+      <mat-form-field appearance="fill">
+        <select matNativeControl required>
+          <option value="val">Select</option>
+          <option value="val1">val1</option>
+          <option value="val2">val2</option>
+          <option value="val3">val3</option>
+        </select>
+      </mat-form-field>
+    </div>
+
+    <div class="col">
+      <label for="Army">
+        Army
+      </label>
+      <mat-form-field appearance="fill">
+        <select matNativeControl required>
+          <option value="val">Select</option>
+          <option value="val1">val1</option>
+          <option value="val2">val2</option>
+          <option value="val3">val3</option>
+        </select>
+      </mat-form-field>
+    </div>
+  </div>
+
+</form>
